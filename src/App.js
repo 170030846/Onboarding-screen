@@ -68,6 +68,11 @@ const useStyles = makeStyles({
     borderRadius: "6px",
     cursor: "pointer",
   },
+  optional: {
+    fontsize: 12,
+    color: "#9ba0ab",
+    fontWeight: 400,
+  },
 });
 
 const StyledDiv = styled((props) => <div {...props} />)(({ theme }) => ({
@@ -418,10 +423,13 @@ const App = () => {
                   <StyledTextField variant="outlined" placeholder="Eden" />
                 </FormControl>
                 <FormControl>
-                  <p className={classes.label}>Workspace URL</p>
+                  <p className={classes.label}>
+                    Workspace URL{" "}
+                    <span className={classes.optional}>{"(optional)"}</span>
+                  </p>
                   <StyledTextField
                     variant="outlined"
-                    placeholder="Steve"
+                    placeholder="Example"
                     InputProps={{
                       startAdornment: (
                         <InputAdornment position="start">
